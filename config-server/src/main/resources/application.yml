@@ -1,0 +1,15 @@
+server:
+  port: 8700
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka02:8672/eureka,http://eureka01:8671/eureka,http://eureka03:8673/eureka
+spring:
+  application:
+    name: configServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://${user.home}/Desktop/config #填写仓库地址 ，远程http://...
+          default-label: master  #分支名称

@@ -1,0 +1,22 @@
+server:
+  port: 8301
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:/democloud?characterEncoding=utf8&&useInformationSchema=true&useSSL=false
+    username: root
+    password: 123456
+  application:
+    name: borrowService
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka02:8672/eureka,http://eureka01:8671/eureka,http://eureka03:8673/eureka
+feign:
+  hystrix:
+    enabled: true #feign需要开启熔断机制的支持 默认是关闭的
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' #暴露端口

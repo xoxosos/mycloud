@@ -1,0 +1,13 @@
+server:
+  port: 8672
+eureka:
+  instance:
+    #由于不支持多个localhost的Eureka服务器，但只能本地测试所以只能自定义主机名字。
+    #设置主机名，通过主机名实现eureka之间的访问
+    hostname: eureka02
+  client:
+    fetch-registry: false
+   # register-with-eureka: false 让其自己注册到其他eureka服务器中 这样才能互相启用
+    service-url:
+    #  defaultZone: http://localhost:8671/eureka
+      defaultZone: http://eureka01:8671/eureka,http://eureka03:8673/eureka #搭建集群填写其他eureka服务名和端口号

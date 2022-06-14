@@ -1,0 +1,9 @@
+server:
+  port: 8201
+spring:
+  application:
+    name: bookService
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka02:8672/eureka,http://eureka01:8671/eureka,http://eureka03:8673/eureka #绑定三个eureka

@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: bookService #其实就是文件名
+      uri: http://localhost:8700 #配置服务器地址
+      profile: dev #环境
+      label: master #分支

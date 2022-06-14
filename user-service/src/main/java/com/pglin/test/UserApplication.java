@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2022/06/13
  */
 @SpringBootApplication
-public class BookApplication {
+public class UserApplication {
     public static void main(String[] args) {
-        SpringApplication.run(BookApplication.class, args);
+        SpringApplication.run(UserApplication.class, args);
     }
 }

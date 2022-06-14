@@ -1,0 +1,11 @@
+server:
+  port: 8673
+eureka:
+  instance:
+    hostname: eureka03
+  client:
+    fetch-registry: false
+   # register-with-eureka: false
+    service-url:
+    #  defaultZone: http://localhost:8671/eureka
+      defaultZone: http://eureka01:8671/eureka,http://eureka02:8672/eureka #搭建集群
